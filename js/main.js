@@ -10,6 +10,10 @@
 ------------------------------------------------*/
 
 /* 1. Header */
+// document.addEventListener('load', function(){
+//     document.getElementById('preloader').style.display = 'none';
+// })
+
 document.addEventListener('DOMContentLoaded', function () {
     const burger = document.querySelector('.header__burger');
     const menu = document.querySelector('.header__menu');
@@ -107,19 +111,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function moveToContacts() {
         const linkToContacts = document.getElementById('linkToContacts')
+        
+        // linkToContacts.addEventListener('click', (event) => {
+        //     const searchSection = document.getElementById('contacts')
 
-        linkToContacts.addEventListener('click', (event) => {
-            const searchSection = document.getElementById('contacts')
-
-            event.preventDefault()
-            const { top, bottom } = searchSection.getBoundingClientRect()
+        //     event.preventDefault()
+        //     const { top, bottom } = searchSection.getBoundingClientRect()
 
 
-            window.scrollTo({
-                top: window.scrollY + top,
-                behavior: "smooth"
-            });
-        })
+        //     window.scrollTo({
+        //         top: window.scrollY + top,
+        //         behavior: "smooth"
+        //     });
+        // })
     }
 
     function scrollToSection() {
@@ -254,8 +258,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function disabledPreloader() {
         document.getElementById('preloader').style.display = 'none';
     }
-
-    
 
     setTimeout(disabledPreloader, 1200);
 
